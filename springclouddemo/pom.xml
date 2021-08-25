@@ -30,6 +30,7 @@
 		<module>nacos2</module>
 		<module>nacosFront</module>
 		<module>nacosConfig</module>
+		<module>nacosGateway</module>
 		<module>sentinel</module>
 	</modules>
 
