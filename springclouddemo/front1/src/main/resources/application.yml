@@ -1,0 +1,25 @@
+server:
+  port: 80
+
+eureka:
+  instance:
+    instance-id: front1_80
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+#      defaultZone: http://localhost:7001/eureka/,http://22110334-8p.iec2.iac:7002/eureka/
+      defaultZone: http://localhost:7101/eureka/
+
+
+spring:
+  application:
+    name: front1
+  cloud:
+    inetutils:
+      timeout-seconds: 5
+logging:
+  level:
+    com.cloud.front1.service.OpenFeign: debug
+

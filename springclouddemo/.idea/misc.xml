@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/front/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/backstageone/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka2/pom.xml" />
+        <option value="$PROJECT_DIR$/backstage2/pom.xml" />
+        <option value="$PROJECT_DIR$/backstage1/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka1/pom.xml" />
+        <option value="$PROJECT_DIR$/backstage/pom.xml" />
+        <option value="$PROJECT_DIR$/front1/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos1/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos2/pom.xml" />
+        <option value="$PROJECT_DIR$/nacosFront/pom.xml" />
+        <option value="$PROJECT_DIR$/nacosConfig/pom.xml" />
+        <option value="$PROJECT_DIR$/sentinel/pom.xml" />
+        <option value="$PROJECT_DIR$/nacosGateway/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

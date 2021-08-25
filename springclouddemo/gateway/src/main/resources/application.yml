@@ -1,0 +1,37 @@
+server:
+  port: 9501
+spring:
+  application:
+    name: gateway
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: backstage_gateway1
+          uri: lb://BACKSTAGE
+          predicates:
+            - Path=/backStage/get/*
+        - id: backstage_gateway2
+          uri: lb://BACKSTAGE
+          predicates:
+            - Path=/backStage/get/*
+            - Cookie=user,nice
+#            - After=2021-08-12T16:31:46.310+08:00[Asia/Shanghai]
+#            - Before=2021-08-12T16:31:46.310+08:00[Asia/Shanghai]
+#            - Between=2021-08-12T16:31:46.310+08:00[Asia/Shanghai],2021-08-12T16:31:46.310+08:00[Asia/Shanghai]
+
+eureka:
+  instance:
+    instance-id: gateway_9501
+    prefer-ip-address: true
+    hostname: gateway_9501_host
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7101/eureka/
+

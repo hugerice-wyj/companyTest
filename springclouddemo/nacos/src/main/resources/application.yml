@@ -1,0 +1,14 @@
+server:
+  port: 8800
+spring:
+  application:
+    name: nacos_8800
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

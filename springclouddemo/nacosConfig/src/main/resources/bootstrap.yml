@@ -1,0 +1,25 @@
+server:
+  port: 3377
+spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      discovery:
+        # nacos 服务注册中心的 ip .将本模块注册进入服务注册中心
+        server-addr: localhost:8848
+      config:
+        # nacos 配置中心的 ip . 将 nacos地址 作为配置中心地址
+        server-addr: localhost:8848
+        # 配置文件的后缀
+        file-extension: yaml
+        group: CLOUD_PROJECT_GROUP
+        namespace: DEV_SERVER
+
+
+# nacos 中的 dataid 为 ${spring.application.name}-${spring-profile.active}.${spring.cloud.nacos.config.file-extension}
+# 官网说明 ： ${prefix}-${spring-profile.active}.${file-extension}
+# ${prefix} 默认为 ${spring.application.name} 也可以通过 ${spring.cloud.nacos.config.prefix} 设置
+# ${spring-profile.active} 一般代表环境，例如：dev-开发环境，test-测试环境等，如果没有配置，则 dataid 格式为 ${prefix}.${file-extension} ,没有 - 符号
+# ${file-extension} 为 ${spring.cloud.nacos.config.file-extension} ，暂时支持两种 properties 和 yaml
+# 注：在 nacos 中配置时注意写 yaml 后缀，而不是 yml 。

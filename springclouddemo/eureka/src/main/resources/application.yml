@@ -1,0 +1,24 @@
+server:
+  port: 7101
+
+eureka:
+  instance:
+    # eureka 微服务名称
+    hostname: localhost
+  client:
+    # false 不注册自己
+    register-with-eureka: false
+    # false 不扫描自己
+    fetch-registry: false
+    service-url:
+      # 默认路径
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    # 关闭 eureka 自我保护
+    enable-self-preservation: true
+    # eureka server 端扫描并清除失效 client 时间间隔。默认 60000 毫秒，即 60 秒
+    eviction-interval-timer-in-ms: 60000
+spring:
+  cloud:
+    inetutils:
+      timeout-seconds: 5

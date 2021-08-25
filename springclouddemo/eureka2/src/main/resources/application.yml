@@ -1,0 +1,16 @@
+server:
+  port: 7002
+
+eureka:
+  instance:
+    hostname: 22110334-8p.iec2.iac
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+
+spring:
+  cloud:
+    inetutils:
+      timeout-seconds: 5

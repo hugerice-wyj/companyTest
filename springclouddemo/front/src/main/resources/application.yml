@@ -1,0 +1,23 @@
+server:
+  port: 80
+spring:
+  application:
+    name: front
+  cloud:
+    inetutils:
+      timeout-seconds: 5
+
+eureka:
+  instance:
+    # 服务注册的ID
+    instance-id: front_80
+    # 访问路径是否显示 ip 地址
+    prefer-ip-address: true
+  client:
+    # 默认为true。表示将自己注册进 eureka-server
+    register-with-eureka: true
+    # 默认为true。从 eureka-server 获取已有的注册信息。集群必须为 true 才能配合 ribbon 使用负载均衡，单点无所谓
+    fetch-registry: true
+    service-url:
+#      defaultZone: http://localhost:7001/eureka/,http://22110334-8p.iec2.iac:7002/eureka/
+      defaultZone: http://localhost:7101/eureka/
